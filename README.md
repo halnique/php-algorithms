@@ -8,3 +8,7 @@
 
 * Bubble Sort
 * Quick Sort
+
+## ListSearch
+
+* Binary Search

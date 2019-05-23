@@ -1,8 +1,8 @@
 <?php
 
-namespace HalniqueTest\Algorithms\Search;
+namespace HalniqueTest\Algorithms\ListSearch;
 
-use Halnique\Algorithms\Search\Binary;
+use Halnique\Algorithms\ListSearch\Binary;
 use HalniqueTest\Algorithms\TestCase;
 
 class BinaryTest extends TestCase
