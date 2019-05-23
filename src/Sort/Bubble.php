@@ -6,9 +6,7 @@ namespace Halnique\Algorithms\Sort;
 class Bubble implements Sortable
 {
     /**
-     * 要素aとその隣の要素bを比較し、a > bなら入れ替えるという操作を(要素数 - 1)回繰り返す
-     * 入れ替えが一度も発生しなければそのループで抜けてしまってもOK
-     *
+     * @see https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%96%E3%83%AB%E3%82%BD%E3%83%BC%E3%83%88
      * @param array $items
      * @return array
      */
@@ -18,17 +16,18 @@ class Bubble implements Sortable
 
         while (true) {
             $swapped = false;
+
             for ($j = 0; $j < $length - 1; $j++) {
                 $a = $items[$j];
                 $b = $items[$j + 1];
-                // 入れ替える
+
                 if ($a > $b) {
                     $items[$j + 1] = $a;
                     $items[$j] = $b;
                     $swapped = true;
                 }
             }
-            // 入れ替えが発生しなければ中断
+
             if (!$swapped) {
                 break;
             }
