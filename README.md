@@ -3,3 +3,4 @@
 ## Sort
 
 * Bubble Sort
+* Quick Sort
