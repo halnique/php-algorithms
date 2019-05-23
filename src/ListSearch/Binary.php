@@ -17,7 +17,7 @@ class Binary implements Searchable
         $length = count($items);
 
         if ($length === 1) {
-            return $item === array_shift($items);
+            return $item === current($items);
         }
 
         $centerIndex = (int)floor($length / 2);
