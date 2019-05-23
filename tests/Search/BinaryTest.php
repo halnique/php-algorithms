@@ -21,44 +21,44 @@ class BinaryTest extends TestCase
     {
         return [
             'pattern int 1-1' => [
-                'actual' => [4, 1, 3, 2],
+                'actual' => [1, 2, 3, 4],
                 'target' => 2,
-                'expected' => 3,
+                'expected' => true,
             ],
             'pattern int 1-2' => [
                 'actual' => [4, 1, 3, 2],
                 'target' => 5,
-                'expected' => null,
+                'expected' => false,
             ],
             'pattern int 2-1' => [
-                'actual' => [7, 17, 5, 3, 13, 2, 11],
+                'actual' => [2, 3, 5, 7, 11, 13, 17],
                 'target' => 13,
-                'expected' => 4,
+                'expected' => true,
             ],
             'pattern int 2-2' => [
-                'actual' => [7, 17, 5, 3, 13, 2, 11],
+                'actual' => [2, 3, 5, 7, 11, 13, 17],
                 'target' => 10,
-                'expected' => null,
+                'expected' => false,
             ],
             'pattern float 1-1' => [
-                'actual' => [2.4, 2.7, 0.3, 1.1, 1.0],
+                'actual' => [0.3, 1.0, 1.1, 2.4, 2.7],
                 'target' => 2.7,
-                'expected' => 1,
+                'expected' => true,
             ],
             'pattern float 1-2' => [
-                'actual' => [2.4, 2.7, 0.3, 1.1, 1.0],
+                'actual' => [0.3, 1.0, 1.1, 2.4, 2.7],
                 'target' => 1.5,
-                'expected' => null,
+                'expected' => false,
             ],
             'pattern string 1-1' => [
-                'actual' => ['monster', 'drink', 'channel', 'speaker', 'towel', 'phone'],
+                'actual' => ['channel', 'drink', 'monster', 'phone', 'speaker', 'towel'],
                 'target' => 'speaker',
-                'expected' => 3,
+                'expected' => true,
             ],
             'pattern string 1-2' => [
-                'actual' => ['monster', 'drink', 'channel', 'speaker', 'towel', 'phone'],
+                'actual' => ['channel', 'drink', 'monster', 'phone', 'speaker', 'towel'],
                 'target' => 'book',
-                'expected' => null,
+                'expected' => false,
             ],
         ];
     }
@@ -67,9 +67,9 @@ class BinaryTest extends TestCase
      * @dataProvider searchDataProvider
      * @param array $actual
      * @param $target
-     * @param int|null $expected
+     * @param bool $expected
      */
-    public function testSearch(array $actual, $target, ?int $expected)
+    public function testSearch(array $actual, $target, bool $expected)
     {
         $this->assertEquals($expected, $this->binary->search($actual, $target));
     }

@@ -6,5 +6,5 @@ namespace Halnique\Algorithms\Search;
 
 interface Searchable
 {
-    public function search(array $items, $item): ?int;
+    public function search(array $items, $item): bool;
 }
