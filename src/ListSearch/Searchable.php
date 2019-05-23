@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Halnique\Algorithms\Search;
+namespace Halnique\Algorithms\ListSearch;
 
 
 interface Searchable
