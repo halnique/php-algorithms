@@ -1,0 +1,34 @@
+{
+    "name": "halnique/php-algorithms",
+    "description": "Algorithms construction by PHP.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "halnique",
+            "email": "shunsuke4dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "php-coveralls/php-coveralls": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Halnique\\Algorithms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HalniqueTest\\Algorithms\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.1.3"
+        }
+    }
+}
