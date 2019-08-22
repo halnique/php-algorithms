@@ -17,13 +17,15 @@ class Bubble implements Sortable
         while (true) {
             $swapped = false;
 
-            for ($j = 0; $j < $length - 1; $j++) {
-                $a = $items[$j];
-                $b = $items[$j + 1];
+            for ($index = 0; $index < $length - 1; $index++) {
+                $nextIndex = $index + 1;
+
+                $a = $items[$index];
+                $b = $items[$nextIndex];
 
                 if ($a > $b) {
-                    $items[$j + 1] = $a;
-                    $items[$j] = $b;
+                    $items[$nextIndex] = $a;
+                    $items[$index] = $b;
                     $swapped = true;
                 }
             }
